@@ -4,7 +4,7 @@ metadata:
   name: vault-config
   namespace: vault-ns
 data: 
-  vault-config-vaules.hcl: |-
+  vault-config-values.hcl: |-
     disable_mlock = true
     ui = true
 

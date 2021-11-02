@@ -6,7 +6,7 @@ spec:
   storageClassName: vault-sc
   persistentVolumeReclaimPolicy: Recycle
   capacity:
-    storage: 5Gi
+    storage: 1Gi
   accessModes:
     - ReadWriteOnce
   hostPath:

@@ -31,9 +31,6 @@ spec:
         - name: config
           configMap: 
             name: vault-config
-            items: 
-            - key: "vault-config-values.hcl"
-              path: "vault-config-values.hcl"
         - name: home
           emptyDir: {}
       containers:
@@ -43,6 +40,7 @@ spec:
           command: 
           - "/bin/sh"
           - "-ec"
+          # - "while true; do sleep 100; done"
           args:
             - |
               cp /vault/config/vault-config-values.hcl /tmp/storageconfig.hcl;
@@ -98,7 +96,7 @@ spec:
     - metadata:
         name: data
       spec:
-        storageClassName: vault-sc
+        # storageClassName: vault-sc
         accessModes:
           - ReadWriteOnce
         resources:

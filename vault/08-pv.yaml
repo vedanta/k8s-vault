@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata: 
+  name: vault-pv
+spec:
+  storageClassName: vault-sc
+  persistentVolumeReclaimPolicy: Recycle
+  capacity:
+    storage: 5Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: /var/data

@@ -1,0 +1,13 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: vault-crb
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  # this clusterrole is availabe by default in the system namespace
+  name: system:auth-delegator
+subjects:
+  - kind: ServiceAccount
+    name: vault-sa
+    namespace: vault-ns

@@ -19,5 +19,5 @@ spec:
         - key: kubernetes.io/hostname
           operator: In
           values:
+            # this needs to be the node from which storage will be used
             - k8s-worker2
-

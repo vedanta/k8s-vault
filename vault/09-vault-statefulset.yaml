@@ -97,7 +97,7 @@ spec:
     - metadata:
         name: data
       spec:
-        # storageClassName: vault-sc
+        storageClassName: local-storage
         accessModes:
           - ReadWriteOnce
         resources:
